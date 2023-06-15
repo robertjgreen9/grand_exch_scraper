@@ -9,7 +9,7 @@ from ids import ids
 url = "https://api.weirdgloop.org/exchange/history/rs/latest?id="
 
 # Finds the config file in the project folder
-current_directory = os.getcwd()
+current_directory = os.path.dirname(os.path.realpath(__file__))
 dotenv_path = f"{current_directory}/.env"
 config = dotenv_values(dotenv_path)
 
