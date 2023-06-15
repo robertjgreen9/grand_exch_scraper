@@ -26,10 +26,6 @@ connection = mysql.connector.connect(
 try:
     if connection.is_connected():
         cursor = connection.cursor()
-    cursor.execute("select @@version ")
-    version = cursor.fetchone()
-    if version:
-        print('Running version: ', version)
     else:
         print('Not connected.')
 except Error as e:
