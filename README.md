@@ -5,7 +5,13 @@ Makes calls to https://api.weirdgloop.org/exchange/history/rs/latest?id={id} and
 
 The MySQL database credentials are logged in the .env file.
 
+MySQL table headers:
+	`id` int,
+	`price` int,
+	`timestamp` varchar(255)
+
 So far, only tested on Windows 11.
+
 
 To do list:
 - Write a function to allow new users to populate the .env config file with the command line
