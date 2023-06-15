@@ -9,7 +9,8 @@ from ids import ids
 url = "https://api.weirdgloop.org/exchange/history/rs/latest?id="
 
 # Finds the config file in the project folder
-dotenv_path = Path('009 MySQL\.env')
+current_directory = os.getcwd()
+dotenv_path = f"{current_directory}/.env"
 config = dotenv_values(dotenv_path)
 
 # Opens the connection to the server in the config .env
